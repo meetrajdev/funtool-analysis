@@ -27,3 +27,52 @@ def state_scripts(state):
         for child in json_data.get('children'):
             scripts.extend(child.get('scripts',[]))
     return scripts
+    
+    
+    #1. Counting number of Sprites
+def number_of_sprites (state,parameters)
+	json_data = state.data.get('json')
+	sprites=[]
+    	if json_data != None:
+     	   sprites.extend(json_data.get('info',[]))
+  	return sprites.spriteCount
+
+
+#2(a). Counting number of Scripts 
+def number_of_scripts (state,parameters)
+	json_data = state.data.get('json')
+	scripts=[]
+    	if json_data != None:
+     	   scripts.extend(json_data.get('info',[]))
+  	return scripts.scriptCount
+
+#2(b). Counting number of Scripts 
+def number_of_scripts (state,parameters)
+	json_data = state.data.get('json')
+	scripts=[]
+	count=0
+    	if json_data != None:
+     	   for script in json_data.get('scripts'):
+		count=count+1
+  	return count
+
+
+#3. Getting out all info for that state
+def state_info (state,parameters)
+	json_data = state.data.get('json')
+	info=[]
+    	if json_data != None:
+     	   info.extend(json_data.get('info',[]))
+  	return info
+
+
+#4. Counting number of states having costumes with hats
+def number_of_scripts_with_hats (state,parameters)
+	json_data = state.data.get('json')
+	costumes=[]
+	count=0
+    	if json_data != None:
+     	   costumes.extend(json_data.get('costumes',[]))
+	   if costumes.costumeName == 'costume 1' or costumes.costumeName == 'costume 2' or costumes.costumeName == 'costume 3':
+		count=count+1
+  	return count
