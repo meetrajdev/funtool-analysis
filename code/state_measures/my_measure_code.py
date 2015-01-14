@@ -30,7 +30,7 @@ def state_scripts(state):
     
     
     #1. Counting number of Sprites
-def number_of_sprites (state,parameters)
+def number_of_sprites(state,parameters)
 	json_data = state.data.get('json')
 	sprites=[]
     	if json_data != None:
@@ -39,7 +39,7 @@ def number_of_sprites (state,parameters)
 
 
 #2(a). Counting number of Scripts 
-def number_of_scripts (state,parameters)
+def number_of_scripts(state,parameters)
 	json_data = state.data.get('json')
 	scripts=[]
     	if json_data != None:
@@ -47,7 +47,7 @@ def number_of_scripts (state,parameters)
   	return scripts.scriptCount
 
 #2(b). Counting number of Scripts 
-def number_of_scripts (state,parameters)
+def number_of_scripts(state,parameters)
 	json_data = state.data.get('json')
 	scripts=[]
 	count=0
@@ -58,7 +58,7 @@ def number_of_scripts (state,parameters)
 
 
 #3. Getting out all info for that state
-def state_info (state,parameters)
+def state_info(state,parameters)
 	json_data = state.data.get('json')
 	info=[]
     	if json_data != None:
@@ -67,7 +67,7 @@ def state_info (state,parameters)
 
 
 #4. Counting number of states having costumes with hats
-def number_of_scripts_with_hats (state,parameters)
+def number_of_scripts_with_hats(state,parameters)
 	json_data = state.data.get('json')
 	costumes=[]
 	count=0
